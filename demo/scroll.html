@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body { 
+      display: flex;
+      justify-content: center;
+    }
+    .container {
+      width: 1318px;
+      height: 500px;
+      background: url("../assets/images/qmsht.jpg") center / cover no-repeat;
+      transition: width 1s;
+    }
+    #btn-switch {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container"></div>
+  <button id="btn-switch">switch</button>
+  <script>
+    const $ = document.querySelector.bind(document)
+    const btnEl = $('#btn-switch')
+    const containerEl = $('.container')
+
+    btnEl.addEventListener('click', function() {
+
+      containerEl.style.width ? containerEl.style.width = '' : containerEl.style.width = '20px'
+    }, false)
+  </script>
+</body>
+</html>
